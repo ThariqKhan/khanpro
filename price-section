@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khanpro Transport - Priser</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #0b1220;
+    }
+
+    .kp-price-info,
+    .kp-price-info * {
+      box-sizing: border-box;
+    }
+
+    .kp-price-info {
+      padding: 110px 24px;
+      background: #ffffff;
+      font-family: 'Inter', sans-serif;
+      color: #0b1220;
+    }
+
+    .kp-price-info__inner {
+      max-width: 1150px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .kp-price-info__label {
+      display: inline-block;
+      margin-bottom: 16px;
+      font-size: 1rem;
+      font-weight: 400;
+      color: rgba(11,18,32,0.58);
+    }
+
+    .kp-price-info h2 {
+      margin: 0 0 24px;
+      font-size: clamp(2.5rem, 5.4vw, 5rem);
+      line-height: 1;
+      font-weight: 400;
+      letter-spacing: -0.055em;
+      color: #050505;
+    }
+
+    .kp-price-info__lead {
+      max-width: 840px;
+      margin: 0 auto 48px;
+      font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+      line-height: 1.6;
+      color: rgba(11,18,32,0.72);
+    }
+
+    .kp-price-info__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-bottom: 30px;
+    }
+
+    .kp-price-info__card {
+      padding: 30px 24px;
+      border-radius: 24px;
+      background: #ffffff;
+      box-shadow: 0 14px 36px rgba(11,18,32,0.07);
+      border: 1px solid rgba(11,18,32,0.06);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .kp-price-info__card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 52px rgba(11,18,32,0.13);
+    }
+
+    .kp-price-info__card h3 {
+      margin: 0 0 12px;
+      font-size: 1.08rem;
+      line-height: 1.2;
+      font-weight: 600;
+      color: #0b1220;
+    }
+
+    .kp-price-info__card p {
+      margin: 0;
+      font-size: 0.94rem;
+      line-height: 1.6;
+      color: rgba(11,18,32,0.68);
+    }
+
+    .kp-price-info__box {
+      max-width: 760px;
+      margin: 0 auto 30px;
+      padding: 22px 24px;
+      border-radius: 22px;
+      background: rgba(11,18,32,0.04);
+      border: 1px solid rgba(11,18,32,0.06);
+      display: grid;
+      gap: 7px;
+    }
+
+    .kp-price-info__box strong {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #0b1220;
+    }
+
+    .kp-price-info__box span {
+      font-size: 0.94rem;
+      line-height: 1.5;
+      color: rgba(11,18,32,0.68);
+    }
+
+    .kp-price-info__actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      max-width: 430px;
+      margin: 0 auto;
+    }
+
+    .kp-price-info__btn {
+      min-height: 52px;
+      border-radius: 999px;
+      background: #0b1220;
+      color: #ffffff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.94rem;
+      font-weight: 500;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    }
+
+    .kp-price-info__btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 30px rgba(11,18,32,0.18);
+      background: #111827;
+    }
+
+    .kp-price-info__btn--ghost {
+      background: transparent;
+      color: #0b1220;
+      border: 1px solid rgba(11,18,32,0.25);
+    }
+
+    .kp-price-info__btn--ghost:hover {
+      background: rgba(11,18,32,0.05);
+      box-shadow: none;
+    }
+
+    @media (max-width: 850px) {
+      .kp-price-info {
+        padding: 72px 16px;
+      }
+
+      .kp-price-info h2 {
+        font-size: clamp(2.2rem, 10vw, 3.6rem);
+        letter-spacing: -0.06em;
+      }
+
+      .kp-price-info__lead {
+        margin-bottom: 36px;
+        font-size: 1rem;
+      }
+
+      .kp-price-info__grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .kp-price-info__card {
+        padding: 24px 20px;
+      }
+
+      .kp-price-info__actions {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .kp-price-info {
+        padding: 64px 14px;
+      }
+
+      .kp-price-info__actions {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+      }
+
+      .kp-price-info__btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="kp-price-info">
+    <div class="kp-price-info__inner">
+
+      <span class="kp-price-info__label">Priser</span>
+
+      <h2>Hva koster flytting og transport?</h2>
+
+      <p class="kp-price-info__lead">
+        Prisen avhenger av type oppdrag, mengde, avstand, etasje, bærehjelp og hvor mye tid jobben tar. Derfor gir vi alltid et tilpasset tilbud basert på behovene dine.
+      </p>
+
+      <div class="kp-price-info__grid">
+        <div class="kp-price-info__card">
+          <h3>Små oppdrag</h3>
+          <p>Perfekt for enkel bortkjøring, småflytting eller transport av enkelte møbler.</p>
+        </div>
+
+        <div class="kp-price-info__card">
+          <h3>Flytteoppdrag</h3>
+          <p>Pris beregnes etter omfang, bærehjelp, avstand og tidsbruk.</p>
+        </div>
+
+        <div class="kp-price-info__card">
+          <h3>Bedrift &amp; kontor</h3>
+          <p>Vi lager en plan og gir tilbud basert på størrelse, utstyr og ønsket tidspunkt.</p>
+        </div>
+      </div>
+
+      <div class="kp-price-info__box">
+        <strong>Få et raskt prisoverslag</strong>
+        <span>Send oss noen detaljer om oppdraget, så gir vi deg et uforpliktende tilbud.</span>
+      </div>
+
+      <div class="kp-price-info__actions">
+        <a href="https://khanprotransport.no/kontakt-oss2" class="kp-price-info__btn">Få prisoverslag</a>
+        <a href="tel:+4740610527" class="kp-price-info__btn kp-price-info__btn--ghost">Ring oss</a>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
