@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khanpro Transport - Kundevurderinger</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #050505;
+    }
+
+    .kp-reviews-section,
+    .kp-reviews-section * {
+      box-sizing: border-box;
+    }
+
+    .kp-reviews-section {
+      width: 100%;
+      padding: 110px 24px 90px;
+      background: #ffffff;
+      font-family: 'Inter', sans-serif;
+      overflow: hidden;
+    }
+
+    .kp-reviews-header {
+      max-width: 1500px;
+      margin: 0 auto 56px;
+      text-align: center;
+    }
+
+    .kp-reviews-header p {
+      margin: 0 0 18px;
+      font-size: clamp(1.45rem, 2.2vw, 2.15rem);
+      line-height: 1.2;
+      font-weight: 400;
+      color: #050505;
+    }
+
+    .kp-reviews-header h2 {
+      margin: 0;
+      font-size: clamp(2.6rem, 6.2vw, 5rem);
+      line-height: 1;
+      font-weight: 400;
+      letter-spacing: -0.055em;
+      color: #050505;
+      text-transform: uppercase;
+    }
+
+    .kp-reviews-widget {
+      max-width: 1450px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 900px) {
+      .kp-reviews-section {
+        padding: 76px 16px 64px;
+      }
+
+      .kp-reviews-header {
+        margin-bottom: 38px;
+      }
+
+      .kp-reviews-header p {
+        margin-bottom: 14px;
+        font-size: clamp(1.15rem, 5vw, 1.5rem);
+      }
+
+      .kp-reviews-header h2 {
+        font-size: clamp(2.1rem, 11vw, 3.45rem);
+        line-height: 1.02;
+        letter-spacing: -0.06em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .kp-reviews-section {
+        padding: 64px 14px 54px;
+      }
+
+      .kp-reviews-header h2 {
+        font-size: clamp(1.85rem, 10.5vw, 2.8rem);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="kp-reviews-section">
+
+    <div class="kp-reviews-header">
+      <p>Kundevurderinger</p>
+      <h2>DETTE SIER KUNDENE VÅRE OM OSS</h2>
+    </div>
+
+    <div class="kp-reviews-widget">
+      <!-- Elfsight Facebook Reviews | Untitled Facebook Reviews -->
+      <script src="https://elfsightcdn.com/platform.js" async></script>
+      <div class="elfsight-app-93dc372c-f0c9-4e69-a569-68ec1e3c0d93" data-elfsight-app-lazy></div>
+    </div>
+
+  </section>
+
+</body>
+</html>
