@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khanpro Transport - Tjenester</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+    }
+
+    .kp-services-modern,
+    .kp-services-modern * {
+      box-sizing: border-box;
+    }
+
+    .kp-services-modern {
+      padding: 140px 28px 84px;
+      background: #ffffff;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .kp-services-modern__header {
+      max-width: 1200px;
+      margin: 0 auto 64px;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .kp-services-modern__header h2 {
+      margin: 0 0 34px;
+      font-size: clamp(3.2rem, 7vw, 5.4rem);
+      line-height: 1;
+      font-weight: 400;
+      letter-spacing: -0.055em;
+      color: #050505;
+      text-transform: uppercase;
+    }
+
+    .kp-services-modern__header p {
+      margin: 0;
+      font-size: clamp(1.35rem, 2.4vw, 2.15rem);
+      line-height: 1.35;
+      font-weight: 400;
+      color: #050505;
+    }
+
+    .kp-services-modern__inner {
+      max-width: 1450px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+    }
+
+    .kp-modern-card {
+      position: relative;
+      min-height: 340px;
+      border-radius: 28px;
+      overflow: hidden;
+      text-decoration: none;
+      color: #fff;
+      isolation: isolate;
+      opacity: 0;
+      transform: translateY(34px) scale(0.98);
+      transition:
+        opacity 0.75s ease,
+        transform 0.75s cubic-bezier(.2,.8,.2,1),
+        box-shadow 0.35s ease;
+    }
+
+    .kp-modern-card.is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .kp-modern-card:hover {
+      transform: translateY(-8px) scale(1.01);
+      box-shadow: 0 28px 70px rgba(11,18,32,0.28);
+    }
+
+    .kp-modern-card__image {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      transform: scale(1);
+      transition: transform 0.9s ease, filter 0.4s ease;
+      z-index: -2;
+    }
+
+    .kp-modern-card:hover .kp-modern-card__image {
+      transform: scale(1.08);
+      filter: saturate(1.08) contrast(1.04);
+    }
+
+    .kp-modern-card__overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(11,18,32,0.96) 0%,
+          rgba(11,18,32,0.82) 38%,
+          rgba(11,18,32,0.42) 72%,
+          rgba(11,18,32,0.18) 100%
+        );
+      transition: background 0.35s ease;
+      z-index: -1;
+    }
+
+    .kp-modern-card:hover .kp-modern-card__overlay {
+      background:
+        linear-gradient(
+          90deg,
+          rgba(11,18,32,1) 0%,
+          rgba(11,18,32,0.9) 42%,
+          rgba(11,18,32,0.55) 74%,
+          rgba(11,18,32,0.22) 100%
+        );
+    }
+
+    .kp-modern-card__content {
+      min-height: 340px;
+      padding: 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      max-width: 62%;
+      transition: transform 0.35s ease;
+    }
+
+    .kp-modern-card:hover .kp-modern-card__content {
+      transform: translateX(8px);
+    }
+
+    .kp-modern-card h3 {
+      margin: 0 0 10px;
+      font-size: clamp(1.35rem, 1.7vw, 1.85rem);
+      line-height: 1.05;
+      font-weight: 500;
+      letter-spacing: -0.035em;
+    }
+
+    .kp-modern-card p {
+      margin: 0 0 20px;
+      font-size: 0.96rem;
+      line-height: 1.55;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .kp-modern-card span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      width: fit-content;
+      padding: 9px 15px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      color: #fff;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.35);
+      transition: all 0.3s ease;
+    }
+
+    .kp-modern-card span::after {
+      content: "→";
+      transition: transform 0.3s ease;
+    }
+
+    .kp-modern-card:hover span {
+      background: rgba(255,255,255,0.18);
+      border-color: rgba(255,255,255,0.7);
+      box-shadow: 0 0 18px rgba(255,255,255,0.18);
+    }
+
+    .kp-modern-card:hover span::after {
+      transform: translateX(5px);
+    }
+
+    .kp-modern-card:nth-child(1) {
+      transition-delay: 0.05s;
+    }
+
+    .kp-modern-card:nth-child(2) {
+      transition-delay: 0.12s;
+    }
+
+    .kp-modern-card:nth-child(3) {
+      transition-delay: 0.19s;
+    }
+
+    .kp-modern-card:nth-child(4) {
+      transition-delay: 0.26s;
+    }
+
+    @media (max-width: 900px) {
+      .kp-services-modern {
+        padding: 74px 14px 54px;
+      }
+
+      .kp-services-modern__header {
+        margin-bottom: 42px;
+        padding: 0 14px;
+      }
+
+      .kp-services-modern__header h2 {
+        font-size: clamp(2.55rem, 11vw, 3.8rem);
+        margin-bottom: 20px;
+        letter-spacing: -0.06em;
+      }
+
+      .kp-services-modern__header p {
+        font-size: clamp(1.05rem, 4.5vw, 1.45rem);
+        line-height: 1.38;
+      }
+
+      .kp-services-modern__inner {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .kp-modern-card {
+        min-height: 260px;
+        border-radius: 20px;
+      }
+
+      .kp-modern-card__overlay {
+        background:
+          linear-gradient(
+            to top,
+            rgba(11,18,32,0.98) 0%,
+            rgba(11,18,32,0.78) 48%,
+            rgba(11,18,32,0.25) 100%
+          );
+      }
+
+      .kp-modern-card__content {
+        min-height: 260px;
+        max-width: 100%;
+        padding: 22px 20px;
+      }
+
+      .kp-modern-card:hover {
+        transform: none;
+        box-shadow: none;
+      }
+
+      .kp-modern-card:hover .kp-modern-card__content {
+        transform: none;
+      }
+
+      .kp-modern-card h3 {
+        font-size: 1.25rem;
+      }
+
+      .kp-modern-card p {
+        font-size: 0.92rem;
+        margin-bottom: 16px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .kp-modern-card,
+      .kp-modern-card__image,
+      .kp-modern-card__content,
+      .kp-modern-card span {
+        transition: none !important;
+        transform: none !important;
+      }
+
+      .kp-modern-card {
+        opacity: 1 !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="kp-services-modern">
+
+    <div class="kp-services-modern__header">
+      <h2>VÅRE TJENESTER</h2>
+      <p>Vi leverer pålitelige og effektive flyttetjenester tilpasset dine behov.</p>
+    </div>
+
+    <div class="kp-services-modern__inner">
+
+      <a class="kp-modern-card" href="https://khanprotransport.no/tjenester-2/flyttehjelp">
+        <div class="kp-modern-card__image" style="background-image:url('https://khanprotransport.no/onewebstatic/image3 (2).jpeg');"></div>
+        <div class="kp-modern-card__overlay"></div>
+        <div class="kp-modern-card__content">
+          <h3>Flyttehjelp</h3>
+          <p>Personlig assistanse gjennom hele flytteprosessen. Vi gjør flyttingen trygg, effektiv og oversiktlig.</p>
+          <span>Les mer</span>
+        </div>
+      </a>
+
+      <a class="kp-modern-card" href="https://khanprotransport.no/tjenester-2/kontorflytting">
+        <div class="kp-modern-card__image" style="background-image:url('https://khanprotransport.no/onewebstatic/ChatGPT%20Image%208.%20mars%202026%2C%2018_23_04.png');"></div>
+        <div class="kp-modern-card__overlay"></div>
+        <div class="kp-modern-card__content">
+          <h3>Kontorflytting</h3>
+          <p>Effektiv flytting av kontorlokaler med god planlegging og minimal nedetid for bedriften.</p>
+          <span>Les mer</span>
+        </div>
+      </a>
+
+      <a class="kp-modern-card" href="https://khanprotransport.no/tjenester-2/transporttjenester">
+        <div class="kp-modern-card__image" style="background-image:url('https://khanprotransport.no/onewebstatic/ChatGPT%20Image%208.%20mars%202026%2C%2018_01_23.png');"></div>
+        <div class="kp-modern-card__overlay"></div>
+        <div class="kp-modern-card__content">
+          <h3>Transporttjenester</h3>
+          <p>Trygg og punktlig transport av varer, møbler og utstyr for både private og bedrifter.</p>
+          <span>Les mer</span>
+        </div>
+      </a>
+
+      <a class="kp-modern-card" href="https://khanprotransport.no/tjenester-2/avfallsh-ndtering">
+        <div class="kp-modern-card__image" style="background-image:url('https://khanprotransport.no/onewebstatic/ChatGPT%20Image%2023.%20feb.%202026%2C%2010_02_19.png');"></div>
+        <div class="kp-modern-card__overlay"></div>
+        <div class="kp-modern-card__content">
+          <h3>Avfallshåndtering</h3>
+          <p>Rask og ryddig bortkjøring av avfall etter flytting, oppussing eller opprydding.</p>
+          <span>Les mer</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <script>
+    const kpModernObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, { threshold: 0.18 });
+
+    document.querySelectorAll('.kp-modern-card').forEach(card => {
+      kpModernObserver.observe(card);
+    });
+  </script>
+
+</body>
+</html>
