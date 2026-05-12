@@ -1,303 +1,332 @@
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khanpro Transport - Hvorfor velge oss</title>
 
-<section class="kp-why">
-  <div class="kp-why__inner">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <div class="kp-why__image kp-reveal">
-      <img src="https://khanprotransport.no/onewebstatic/image5.jpeg" alt="Khanpro Transport team">
-    </div>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      overflow-x: hidden;
+    }
 
-    <div class="kp-why__content">
-      <h2 class="kp-reveal">Hvorfor velge oss?</h2>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #0f223f;
+    }
 
-      <div class="kp-why__list">
+    .kp-why,
+    .kp-why * {
+      box-sizing: border-box;
+    }
 
-        <div class="kp-why__item kp-reveal">
-          <div class="kp-why__icon" aria-hidden="true">✓</div>
-          <div>
-            <h4>Rask og effektiv flytting</h4>
-            <p>Vi planlegger smart og jobber effektivt, slik at flyttingen går smidig og uten unødvendig tidsbruk.</p>
-          </div>
-        </div>
-
-        <div class="kp-why__item kp-reveal">
-          <div class="kp-why__icon" aria-hidden="true">✓</div>
-          <div>
-            <h4>Trygg håndtering</h4>
-            <p>Eiendelene dine behandles med omtanke og sikres godt, slik at alt kommer trygt frem.</p>
-          </div>
-        </div>
-
-        <div class="kp-why__item kp-reveal">
-          <div class="kp-why__icon" aria-hidden="true">✓</div>
-          <div>
-            <h4>Kundefokusert service</h4>
-            <p>Vi setter dine behov først og sørger for personlig oppfølging gjennom hele prosessen.</p>
-          </div>
-        </div>
-
-        <div class="kp-why__item kp-reveal">
-          <div class="kp-why__icon" aria-hidden="true">✓</div>
-          <div>
-            <h4>Pålitelig og profesjonell</h4>
-            <p>Vi leverer trygge og effektive tjenester med fokus på kvalitet og punktlighet.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<style>
-  .kp-why,
-  .kp-why * {
-    box-sizing: border-box;
-  }
-
-  .kp-why {
-    background: #ffffff;
-    padding: 100px 40px;
-    font-family: 'Inter', sans-serif;
-    color: #0f223f;
-    overflow: hidden;
-  }
-
-  .kp-why__inner {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 80px;
-    align-items: center;
-  }
-
-  .kp-why__image {
-    overflow: hidden;
-    border-radius: 24px;
-    min-height: 520px;
-  }
-
-  .kp-why__image img {
-    width: 100%;
-    height: 100%;
-    min-height: 520px;
-    display: block;
-    border-radius: 24px;
-    object-fit: cover;
-    object-position: center;
-    transition: transform 0.7s ease;
-  }
-
-  .kp-why__image:hover img {
-    transform: scale(1.03);
-  }
-
-  .kp-why__content h2 {
-    font-size: clamp(2.2rem, 3vw, 3rem);
-    margin: 0 0 40px;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    line-height: 1.05;
-    color: #0f223f;
-  }
-
-  .kp-why__list {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-  }
-
-  .kp-why__item {
-    display: flex;
-    gap: 18px;
-    align-items: flex-start;
-    padding: 14px 0;
-    border-bottom: 1px solid rgba(15,34,63,0.08);
-    transition: transform 0.25s ease;
-  }
-
-  .kp-why__item:last-child {
-    border-bottom: 0;
-  }
-
-  .kp-why__item:hover {
-    transform: translateX(6px);
-  }
-
-  .kp-why__icon {
-    flex: 0 0 42px;
-    width: 42px;
-    height: 42px;
-    border-radius: 12px;
-    border: 1px solid rgba(15,34,63,0.18);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1rem;
-    color: #0f223f;
-    background: rgba(15,34,63,0.04);
-    transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
-  }
-
-  .kp-why__item:hover .kp-why__icon {
-    transform: translateY(-1px);
-    background: rgba(15,34,63,0.08);
-    border-color: rgba(15,34,63,0.28);
-  }
-
-  .kp-why__item h4 {
-    margin: 0 0 6px;
-    font-size: 1.08rem;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    line-height: 1.25;
-    color: #0f223f;
-  }
-
-  .kp-why__item p {
-    margin: 0;
-    font-size: 0.98rem;
-    line-height: 1.65;
-    color: rgba(15,34,63,0.78);
-    max-width: 54ch;
-  }
-
-  .kp-reveal {
-    opacity: 0;
-    transform: translateY(34px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-
-  .kp-reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .kp-why__item:nth-child(1) {
-    transition-delay: 0.05s;
-  }
-
-  .kp-why__item:nth-child(2) {
-    transition-delay: 0.12s;
-  }
-
-  .kp-why__item:nth-child(3) {
-    transition-delay: 0.19s;
-  }
-
-  .kp-why__item:nth-child(4) {
-    transition-delay: 0.26s;
-  }
-
-  @media (max-width: 900px) {
     .kp-why {
-      padding: 64px 18px;
+      background: #ffffff;
+      padding: 100px 40px;
+      font-family: 'Inter', sans-serif;
+      color: #0f223f;
+      overflow: hidden;
     }
 
     .kp-why__inner {
-      grid-template-columns: 1fr;
-      gap: 34px;
-    }
-
-    .kp-why__content {
-      order: 1;
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 80px;
+      align-items: center;
     }
 
     .kp-why__image {
-      order: 2;
-      min-height: 320px;
-      border-radius: 18px;
+      overflow: hidden;
+      border-radius: 24px;
+      min-height: 520px;
     }
 
     .kp-why__image img {
-      min-height: 320px;
-      border-radius: 18px;
+      width: 100%;
+      height: 100%;
+      min-height: 520px;
+      display: block;
+      border-radius: 24px;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.7s ease;
+    }
+
+    .kp-why__image:hover img {
+      transform: scale(1.03);
     }
 
     .kp-why__content h2 {
-      margin-bottom: 24px;
-      font-size: clamp(1.9rem, 9vw, 2.45rem);
+      font-size: clamp(2.2rem, 3vw, 3rem);
+      margin: 0 0 40px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      color: #0f223f;
     }
 
     .kp-why__list {
-      gap: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
     }
 
     .kp-why__item {
-      gap: 14px;
-      padding: 12px 0;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(15,34,63,0.08);
+      transition: transform 0.25s ease;
+    }
+
+    .kp-why__item:last-child {
+      border-bottom: 0;
     }
 
     .kp-why__item:hover {
-      transform: none;
+      transform: translateX(6px);
     }
 
     .kp-why__icon {
-      flex-basis: 38px;
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
+      flex: 0 0 42px;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      border: 1px solid rgba(15,34,63,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #0f223f;
+      background: rgba(15,34,63,0.04);
+      transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+    }
+
+    .kp-why__item:hover .kp-why__icon {
+      transform: translateY(-1px);
+      background: rgba(15,34,63,0.08);
+      border-color: rgba(15,34,63,0.28);
     }
 
     .kp-why__item h4 {
-      font-size: 1rem;
+      margin: 0 0 6px;
+      font-size: 1.08rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+      color: #0f223f;
     }
 
     .kp-why__item p {
-      font-size: 0.93rem;
-      max-width: none;
-    }
-  }
-
-  @media (max-width: 520px) {
-    .kp-why {
-      padding: 56px 14px;
-    }
-
-    .kp-why__image,
-    .kp-why__image img {
-      min-height: 260px;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .kp-reveal,
-    .kp-why__image img,
-    .kp-why__item,
-    .kp-why__icon {
-      transition: none !important;
-      transform: none !important;
+      margin: 0;
+      font-size: 0.98rem;
+      line-height: 1.65;
+      color: rgba(15,34,63,0.78);
+      max-width: 54ch;
     }
 
     .kp-reveal {
-      opacity: 1 !important;
-    }
-  }
-</style>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const reveals = document.querySelectorAll('.kp-reveal');
-
-    if (!('IntersectionObserver' in window)) {
-      reveals.forEach(el => el.classList.add('active'));
-      return;
+      opacity: 0;
+      transform: translateY(34px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
     }
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          observer.unobserve(entry.target);
-        }
+    .kp-reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .kp-why__item:nth-child(1) {
+      transition-delay: 0.05s;
+    }
+
+    .kp-why__item:nth-child(2) {
+      transition-delay: 0.12s;
+    }
+
+    .kp-why__item:nth-child(3) {
+      transition-delay: 0.19s;
+    }
+
+    .kp-why__item:nth-child(4) {
+      transition-delay: 0.26s;
+    }
+
+    @media (max-width: 900px) {
+      .kp-why {
+        padding: 64px 18px;
+      }
+
+      .kp-why__inner {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .kp-why__content {
+        order: 1;
+      }
+
+      .kp-why__image {
+        order: 2;
+        min-height: 320px;
+        border-radius: 18px;
+      }
+
+      .kp-why__image img {
+        min-height: 320px;
+        border-radius: 18px;
+      }
+
+      .kp-why__content h2 {
+        margin-bottom: 24px;
+        font-size: clamp(1.9rem, 9vw, 2.45rem);
+      }
+
+      .kp-why__list {
+        gap: 14px;
+      }
+
+      .kp-why__item {
+        gap: 14px;
+        padding: 12px 0;
+      }
+
+      .kp-why__item:hover {
+        transform: none;
+      }
+
+      .kp-why__icon {
+        flex-basis: 38px;
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+      }
+
+      .kp-why__item h4 {
+        font-size: 1rem;
+      }
+
+      .kp-why__item p {
+        font-size: 0.93rem;
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .kp-why {
+        padding: 56px 14px;
+      }
+
+      .kp-why__image,
+      .kp-why__image img {
+        min-height: 260px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .kp-reveal,
+      .kp-why__image img,
+      .kp-why__item,
+      .kp-why__icon {
+        transition: none !important;
+        transform: none !important;
+      }
+
+      .kp-reveal {
+        opacity: 1 !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="kp-why">
+    <div class="kp-why__inner">
+
+      <div class="kp-why__image kp-reveal">
+        <img src="https://khanprotransport.no/onewebstatic/image5.jpeg" alt="Khanpro Transport team">
+      </div>
+
+      <div class="kp-why__content">
+        <h2 class="kp-reveal">Hvorfor velge oss?</h2>
+
+        <div class="kp-why__list">
+
+          <div class="kp-why__item kp-reveal">
+            <div class="kp-why__icon" aria-hidden="true">✓</div>
+            <div>
+              <h4>Rask og effektiv flytting</h4>
+              <p>Vi planlegger smart og jobber effektivt, slik at flyttingen går smidig og uten unødvendig tidsbruk.</p>
+            </div>
+          </div>
+
+          <div class="kp-why__item kp-reveal">
+            <div class="kp-why__icon" aria-hidden="true">✓</div>
+            <div>
+              <h4>Trygg håndtering</h4>
+              <p>Eiendelene dine behandles med omtanke og sikres godt, slik at alt kommer trygt frem.</p>
+            </div>
+          </div>
+
+          <div class="kp-why__item kp-reveal">
+            <div class="kp-why__icon" aria-hidden="true">✓</div>
+            <div>
+              <h4>Kundefokusert service</h4>
+              <p>Vi setter dine behov først og sørger for personlig oppfølging gjennom hele prosessen.</p>
+            </div>
+          </div>
+
+          <div class="kp-why__item kp-reveal">
+            <div class="kp-why__icon" aria-hidden="true">✓</div>
+            <div>
+              <h4>Pålitelig og profesjonell</h4>
+              <p>Vi leverer trygge og effektive tjenester med fokus på kvalitet og punktlighet.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const reveals = document.querySelectorAll('.kp-reveal');
+
+      if (!('IntersectionObserver' in window)) {
+        reveals.forEach(el => el.classList.add('active'));
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.18
       });
-    }, {
-      threshold: 0.18
-    });
 
-    reveals.forEach(el => observer.observe(el));
-  });
-</script>
+      reveals.forEach(el => observer.observe(el));
+    });
+  </script>
+
+</body>
+</html>
